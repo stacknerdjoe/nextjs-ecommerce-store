@@ -26,6 +26,7 @@ A personal e-commerce store for buying game-themed stickers. Built as a portfoli
 | Technology | Purpose |
 |------------|---------|
 | [Next.js](https://nextjs.org/) | React framework (SSR + routing) |
+| [TypeScript](https://www.typescriptlang.org/) | Type-safe JavaScript |
 | [FantaCSS](https://fantacss.dev/) | Styling and UI components |
 | [Stripe](https://stripe.com/) | Payment processing |
 
