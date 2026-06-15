@@ -1,26 +1,22 @@
 'use client'
 
-import { useState, useRef, useEffect } from "react"
+import { useState } from "react"
+import Image from "next/image"
 
 export default function ImageBanner() {
   const [isloaded, setIsLoaded] = useState(false)
-  const imgRef = useRef<HTMLImageElement>(null)
-
-  useEffect(() => {
-    if (imgRef.current?.complete) {
-      setIsLoaded(true)
-    }
-  }, [])
 
   return (
     <div className="banner-images">
-      <img className="low-res-img" src="low_res/banner.jpeg" alt="banner-low-res" />
-      <img
-        ref={imgRef}
+      <Image className="low-res-img" src="/low_res/banner.jpeg" alt="banner-low-res"
+        width={1920} height={600} style={{ width: '100%', height: 'auto' }} />
+      <Image
         className="high-res-img"
-        src="med_res/banner.png"
+        src="/med_res/banner.png"
         alt="banner-high-res"
-        style={{ opacity: isloaded ? 1 : 0 }}
+        width={1920}
+        height={600}
+        style={{ opacity: isloaded ? 1 : 0, width: '100%', height: 'auto' }}
         onLoad={() => {
           setIsLoaded(true)
         }}

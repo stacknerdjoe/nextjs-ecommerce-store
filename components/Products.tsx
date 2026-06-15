@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react"
+import Image from "next/image"
 import Portal from "./Portal"
 import { useProducts } from "@/context/ProductContext"
 import type { StoreProduct } from "@/types"
@@ -22,8 +23,9 @@ export default function Products({ planner, stickers }: ProductsProps) {
       {portalImage && (
         <Portal handleClosePortal={() => { setPortalImage(null) }}>
           <div className="portal-content">
-            <img className="img-display" src={`med_res/${portalImage}.jpeg`}
-              alt={`${portalImage}-high-res`} />
+            <Image className="img-display" src={`/med_res/${portalImage}.jpeg`}
+              alt={`${portalImage}-high-res`} width={800} height={800}
+              style={{ width: '100%', height: 'auto' }} />
           </div>
         </Portal>
       )}
@@ -38,7 +40,8 @@ export default function Products({ planner, stickers }: ProductsProps) {
             <button onClick={() => {
               setPortalImage('planner')
             }} className="img-button">
-              <img src="low_res/planner.jpeg" alt="high-res-planner" />
+              <Image src="/low_res/planner.jpeg" alt="high-res-planner"
+                width={500} height={500} style={{ width: '100%', height: 'auto' }} />
             </button>
           </div>
           <div className="planner-info">
@@ -79,7 +82,8 @@ export default function Products({ planner, stickers }: ProductsProps) {
                 <button onClick={() => {
                   setPortalImage(stickerImgUrl)
                 }} className="img-button">
-                  <img src={`low_res/${stickerImgUrl}.jpeg`} alt={`${stickerImgUrl}-low-res`} />
+                  <Image src={`/low_res/${stickerImgUrl}.jpeg`} alt={`${stickerImgUrl}-low-res`}
+                    width={300} height={300} style={{ width: '100%', height: 'auto' }} />
                 </button>
                 <div className="sticker-info">
                   <p className="text-medium">{stickerName}</p>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useProducts } from "@/context/ProductContext";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -55,7 +56,8 @@ export default function CartPage() {
 
           return (
             <div key={itemIndex} className="cart-item">
-              <img src={imgUrl} alt={imgName + '-img'} />
+              <Image src={'/' + imgUrl} alt={imgName + '-img'}
+                width={200} height={200} style={{ width: '100%', height: 'auto' }} />
               <div className="cart-item-info">
                 <h3>{itemData.name}</h3>
                 <p>
