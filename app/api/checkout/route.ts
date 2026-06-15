@@ -1,9 +1,8 @@
 import Stripe from "stripe"
 import '../../../envConfig'
 
-const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY!)
-
 export async function POST(request: Request) {
+  const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY!)
   try {
     const { lineItems } = await request.json()
     console.log(lineItems)
