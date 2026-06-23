@@ -55,7 +55,7 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="auth-page">
+    <div className="auth-container">
       <div className="auth-card">
         <h1>Create Account</h1>
 
