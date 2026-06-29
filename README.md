@@ -4,7 +4,7 @@
 
 A full-stack e-commerce platform for game-themed stickers, built with Next.js 16, TypeScript, Stripe, Auth.js and Supabase PostgreSQL. Designed as a production-grade portfolio project demonstrating modern web development practices.
 
-🔗 **Live Demo:** [naijastore.vercel.app](https://www.naijastore.vercel.app)
+🔗 **Live Demo:** [naijastore-se.vercel.app](https://www.naijastore.vercel.app)
 
 ---
 
